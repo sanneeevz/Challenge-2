@@ -1,3 +1,14 @@
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr;
+	
+	grid-template-areas:
+		"header"
+		"time"
+		"date"
+		"welcome";
+}
+
 @font-face {
   font-family: impact;
   src: url(font/impact/impact.ttf);
@@ -8,15 +19,35 @@
   src: url(font/digital.ttf);
 }
 
+.box-1 {
+	grid-area: header;
+	background-color: red;
+}
+
+.box-2 {
+	grid-area: time;
+	background-color: green;
+}
 
 #time {
 	font-family: digital;
 	color: red;
 	font-size: 20px;
+	text-align: center;
+}
+
+.box-3 {
+	grid-area: date;
+	background-color: yellow;
 }
 
 #day {
 	color: green;
 	font-family: impact;
+	text-align: center;
+}
 
+.box-4 {
+	grid-area: welcome;
+	background-color: blue;
 }

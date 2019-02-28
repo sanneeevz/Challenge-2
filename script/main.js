@@ -1,5 +1,6 @@
 function startTime() {
   var today = new Date();
+  var curHr = today.getHours()
   var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
@@ -14,6 +15,14 @@ function startTime() {
   document.getElementById('day').innerHTML = 
   d + " " + x + " " + y;  
   var t = setTimeout(startTime, 500);
+
+  if (curHr < 12) {
+    console.log('good morning')
+  } else if (curHr < 18) {
+    console.log('good afternoon')
+  } else {
+    console.log('good evening')
+  }
 
   // var d = new Date();
   // var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
