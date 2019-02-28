@@ -1,0 +1,22 @@
+@font-face {
+  font-family: impact;
+  src: url(font/impact/impact.ttf);
+}
+
+@font-face {
+  font-family: digital;
+  src: url(font/digital.ttf);
+}
+
+
+#time {
+	font-family: digital;
+	color: red;
+	font-size: 20px;
+}
+
+#day {
+	color: green;
+	font-family: impact;
+
+}

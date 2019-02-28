@@ -4,24 +4,21 @@ function startTime() {
   var m = today.getMinutes();
   var s = today.getSeconds();
   var d = today.getDate();
-  var mnd =  today.getMonth();
+  var x = today.getMonth();
   var y = today.getFullYear();
   m = checkTime(m);
   s = checkTime(s);
+  x = checkTime(x);
   document.getElementById('time').innerHTML =
   h + ":" + m + ":" + s;
-  documet.getElementById('demo').innerHTML = 
-  d + mnd + y
+  document.getElementById('day').innerHTML = 
+  d + " " + x + " " + y;  
   var t = setTimeout(startTime, 500);
 
   // var d = new Date();
   // var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   // document.getElementById("demo").innerHTML = months[d.getMonth()];
-
-  var d = new Date();
-  document.getElementById("day").innerHTML = d.getDate();
 } 
-
 
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
