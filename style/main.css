@@ -4,9 +4,11 @@
 	
 	grid-template-areas:
 		"header"
+		"welcome"
 		"time"
-		"date"
-		"welcome";
+		"date";
+
+	background-image: 
 }
 
 @font-face {
@@ -19,35 +21,97 @@
   src: url(font/digital.ttf);
 }
 
+body {
+	background-color: black;
+}
+
 .box-1 {
 	grid-area: header;
-	background-color: red;
 }
 
-.box-2 {
-	grid-area: time;
-	background-color: green;
+.logo {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 250px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 }
 
-#time {
-	font-family: digital;
-	color: red;
-	font-size: 20px;
+.box-2{
+	grid-area: welcome;
+	background-color: #00FF00;
 	text-align: center;
+	font-family: impact;
+	height: 200px;
+	font-size: 30px;
+}
+
+#image img {
+	position: relative;
+	width: 50px;
 }
 
 .box-3 {
-	grid-area: date;
-	background-color: yellow;
+	grid-area: time;
+	background-color: #FFFF00;
+	font-family: digital;
+	height: 100px;
 }
 
-#day {
-	color: green;
+#time {
 	font-family: impact;
+	color: black;
+	font-size: 50px;
 	text-align: center;
 }
 
 .box-4 {
-	grid-area: welcome;
-	background-color: blue;
+	grid-area: date;
+	background-color: #FF0033;
 }
+
+#day {
+	color: white;
+	font-family: impact;
+	text-align: center;
+	font-size: 50px;
+}
+
+/* IPAD SIZE */
+@media only screen and (min-width: 768px) {
+
+}
+
+	/* DESKTOP SIZE */
+@media only screen and (min-width: 1024px) {
+
+	.grid-container{
+		grid-template-columns: 1fr 1fr;
+
+		grid-template-areas:
+				"header welcome"
+				"time time"
+				"date date";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
