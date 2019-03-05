@@ -16,11 +16,6 @@
   src: url(font/impact/impact.ttf);
 }
 
-@font-face {
-  font-family: digital;
-  src: url(font/digital.ttf);
-}
-
 body {
 	background-color: black;
 }
@@ -58,7 +53,6 @@ p {
 }
 
 #hello {
-	margin-top: 0px;
 	color: black;
 }
 
@@ -116,6 +110,29 @@ p {
 
 /* IPAD SIZE */
 @media only screen and (min-width: 768px) {
+
+	.logo {
+		width: 300px;
+	}
+
+	#image img {
+		width: 90px;
+		margin-top: 10%;
+	}
+
+	.box-2 {
+		width: 550px;
+		height: 300px;
+		font-size: 40px;
+	}
+
+	.box-3 {
+		width: 550px;
+	}
+
+	.box-4 {
+		width: 550px;
+	}
 
 }
 

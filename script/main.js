@@ -1,7 +1,7 @@
 //get current hours
 var hours = new Date().getHours();
 
-hours = 12;
+hours = 21;
 
 //pakt datum en tijd
 function startTime() {
@@ -92,8 +92,7 @@ function moveSunImage(){
 function moveMoonImage(){
   //TweenMax.to("#image img", 6 {x:600, rotation:360, scale:0.5});
   var moon = document.getElementById("moon");
-  TweenMax.to(moon, 2.5, {ease: SlowMo.ease.config(0.5, 0.5, true),
-  y: -250, repeat:-1 });
+  TweenMax.to(moon, 2, {x:window, rotation: 80, repeat:-1, yoyo:true});
 }
 
 sayHello();
