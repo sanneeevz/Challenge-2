@@ -139,13 +139,43 @@ p {
 	/* DESKTOP SIZE */
 @media only screen and (min-width: 1024px) {
 
-	.grid-container{
-		grid-template-columns: 1fr 1fr;
+	.logo {
+		width: 350px;
+		margin-bottom: -35px;
+	}
 
-		grid-template-areas:
-				"header welcome"
-				"time time"
-				"date date";
+	#image img {
+		width: 170px;
+		margin-top: 10%;
+	}
+
+	.box-2 {
+		width: 900px;
+		height: 450px;
+		font-size: 60px;
+	}
+
+	.box-3 {
+		width: 900px;
+		height: 170px;
+	}
+
+	.living {
+		font-size: 20px;
+	}
+
+	#time {
+		font-size: 60px;
+	}
+
+	.box-4 {
+		width: 900px;
+		height: 100px;
+	}
+
+	#day {
+		font-size: 60px;
+	}
 }
 
 
