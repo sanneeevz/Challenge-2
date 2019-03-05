@@ -25,13 +25,19 @@ body {
 	background-color: black;
 }
 
+p {
+	text-align: center;
+	font-family: impact;
+	margin-top: -3px;
+}
+
 .box-1 {
 	grid-area: header;
 }
 
 .logo {
 	margin-top: 0px;
-	margin-bottom: 0px;
+	margin-bottom: -30px;
 	width: 250px;
 	display: block;
   	margin-left: auto;
@@ -40,23 +46,43 @@ body {
 
 .box-2{
 	grid-area: welcome;
-	background-color: #00FF00;
 	text-align: center;
 	font-family: impact;
-	height: 200px;
+	height: 250px;
 	font-size: 30px;
+	width: 350px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+}
+
+#hello {
+	margin-top: 0px;
+	color: black;
 }
 
 #image img {
 	position: relative;
-	width: 50px;
+	width: 70px;
+	margin-top: 20%;
+}
+
+#martians {
+	color: white;
+	background-color: black;
+	margin-top: 5px;
 }
 
 .box-3 {
 	grid-area: time;
-	background-color: #FFFF00;
 	font-family: digital;
-	height: 100px;
+	height: 150px;
+	width: 350px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
 }
 
 #time {
@@ -66,13 +92,23 @@ body {
 	text-align: center;
 }
 
+.living {
+	margin-top: 20px;
+}
+
 .box-4 {
 	grid-area: date;
-	background-color: #FF0033;
+	background-color: white;
+	height: 150px;
+	margin-top: -30px;
+	width: 350px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #day {
-	color: white;
+	color: black;
 	font-family: impact;
 	text-align: center;
 	font-size: 50px;

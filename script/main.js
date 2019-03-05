@@ -1,8 +1,9 @@
 //get current hours
 var hours = new Date().getHours();
 
-hours = 8;
+hours = 12;
 
+//pakt datum en tijd
 function startTime() {
   var today = new Date();
   var curHr = today.getHours()
@@ -21,38 +22,29 @@ function startTime() {
   document.getElementById('day').innerHTML = d + " - " + x + " - " + y;  
   
   var t = setTimeout(startTime, 500);
-
-  if (curHr < 12) {
-    console.log('good morning')
-  } else if (curHr < 18) {
-    console.log('good afternoon')
-  } else {
-    console.log('good evening')
-  }
-
-  // var d = new Date();
-  // var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  // document.getElementById("demo").innerHTML = months[d.getMonth()];
 } 
 
+//plaats een 0 voor nummer onder de 10
 function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  if (i < 10) {i = "0" + i}; 
   return i;
 }
 
+//groet mbt tijd
 function sayHello() {
   var greeting;
 
   if (hours < 10) {
-    greeting = "Good morning";
+    greeting = "GOOD MORNING";
   } else if (hours < 20) {
-    greeting = "Good afternoon";
+    greeting = "GOOD AFTERNOON";
   } else {
-    greeting = "Good evening";
+    greeting = "GOOD EVENING";
   }
   document.getElementById("hello").innerHTML = greeting;
 }
 
+//laat de goede image zien ivm tijd
 function showImages() {
 
   if (hours < 10) {
@@ -69,24 +61,42 @@ function showImages() {
   }
 }
 
+function changeBackground() {
+
+  if (hours < 10) {
+    document.write('<body style="background-color:#FA6304">');
+  }
+
+  else if (hours < 20) {
+    document.write('<body style="background-color:#7AD7F0">');
+  }
+  else {
+    document.write('<body style="background-color:#00008b">');
+  }
+}
+
+//TweenMax
 function moveShineImage(){
   //TweenMax.to("#image img", 6 {x:600, rotation:360, scale:0.5});
   var shine = document.getElementById("shine");
-  TweenMax.to(shine, 2, {x:window, rotation:360, scale:0.5, repeat:-1, yoyo:true});
+  TweenMax.to(shine, 2, {ease: SlowMo.ease.config(0.2, 0.2, true),
+  y: -50, repeat:-1 });
 }
 
 function moveSunImage(){
   //TweenMax.to("#image img", 6 {x:600, rotation:360, scale:0.5});
   var sun = document.getElementById("sun");
-  TweenMax.to(sun, 2, {x:window.innerWidth/2, rotation:360, scale:0.5, repeat:-1, yoyo:true, ease:Linear.easeNone});
+  TweenMax.to(sun, 2, {x:window, rotation:360, scale:0.5, repeat:-1, yoyo:true});
 }
 
 function moveMoonImage(){
   //TweenMax.to("#image img", 6 {x:600, rotation:360, scale:0.5});
   var moon = document.getElementById("moon");
-  TweenMax.to(moon, 2, {x:window.innerWidth/2, scale:0.5, repeat:-1, yoyo:true, ease:Sine.easeInOut});
+  TweenMax.to(moon, 2.5, {ease: SlowMo.ease.config(0.5, 0.5, true),
+  y: -250, repeat:-1 });
 }
 
 sayHello();
 startTime();
 showImages();
+changeBackground();
