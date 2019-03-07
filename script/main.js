@@ -1,7 +1,7 @@
 //get current hours
 var hours = new Date().getHours();
 
-hours = 8;
+// hours = 9;
 
 //pakt datum en tijd
 function startTime() {
@@ -34,9 +34,9 @@ function checkTime(i) {
 function sayHello() {
   var greeting;
 
-  if (hours < 10) {
+  if (hours < 12) {
     greeting = "GOOD MORNING";
-  } else if (hours < 20) {
+  } else if (hours < 18) {
     greeting = "GOOD AFTERNOON";
   } else {
     greeting = "GOOD EVENING";
@@ -47,11 +47,11 @@ function sayHello() {
 //laat de goede image zien ivm tijd
 function showImages() {
 
-  if (hours < 10) {
+  if (hours < 12) {
     document.getElementById("image").innerHTML  = "<img src='img/morning.png' id=\"shine\">";
     moveShineImage();
 
-  } else if (hours < 20) {
+  } else if (hours < 18) {
     document.getElementById("image").innerHTML  = "<img src='img/afternoon.png' id=\"sun\">";
     moveSunImage();
 
@@ -63,11 +63,11 @@ function showImages() {
 
 function changeBackground() {
 
-  if (hours < 10) {
+  if (hours < 12) {
     document.write('<body style="background-color:#FA6304">');
   }
 
-  else if (hours < 20) {
+  else if (hours < 18) {
     document.write('<body style="background-color:#7AD7F0">');
   }
   else {
